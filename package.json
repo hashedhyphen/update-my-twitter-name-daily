@@ -1,0 +1,34 @@
+{
+  "name": "update-my-twitter-name-daily",
+  "description": "Update @hashedhyphen's name daily",
+  "version": "1.0.0",
+  "author": "Ryo Kato <ryo_kato@hashedhyphen.com>",
+  "bugs": "https://github.com/hashedhyphen/update-my-twitter-name-daily/issues",
+  "dependencies": {
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "fixpack": "^2.3.1",
+    "prettier": "1.13.7"
+  },
+  "engines": {
+    "node": "8.10"
+  },
+  "homepage": "https://github.com/hashedhyphen/update-my-twitter-name-daily",
+  "keywords": [
+    "aws",
+    "joke",
+    "lambda",
+    "twitter"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "https://github.com/hashedhyphen/update-my-twitter-name-daily",
+  "scripts": {
+    "upload": "zip -r bundle.zip * && aws s3 cp bundle.zip s3://update-my-twitter-name-daily/bundle.zip",
+    "test": "yarn run eslint *.js"
+  }
+}
