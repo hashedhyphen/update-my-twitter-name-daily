@@ -11,7 +11,7 @@ const GOT_JOBLESS_AT = new Date(2018, 6, 19, 15); // JST 2018-07-20 0:00
 const ENDPOINT_FOR_UPDATE_PROFILE = 'account/update_profile';
 
 const calcNthDaySinceJobless = (now = new Date()) => {
-  const nowInMsec = now.getTime();
+  const owInMsec = now.getTime();
   const gotJoblessAtInMsec = GOT_JOBLESS_AT.getTime();
 
   const nthDaySinceJobless =
